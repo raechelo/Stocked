@@ -21,3 +21,4 @@ export const toggleFavorite = id => ({
 export const filterRecipes = input => ({
   type: 'FILTER_RECIPES',
   input
+})
