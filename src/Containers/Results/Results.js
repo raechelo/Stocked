@@ -10,7 +10,7 @@ export class Results extends Component {
     this.props.fetchRecipes(url)
   }
   render() {
-    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r}  />))
+    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r} key={r.idMeal}  />))
 
     return (
       <div>
