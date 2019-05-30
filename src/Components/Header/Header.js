@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div>
+    <header className="Header">
       <h1>Stocked.</h1>
-    </div> 
+    </header> 
   )
 }

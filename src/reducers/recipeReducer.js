@@ -1,7 +1,7 @@
 export const recipes = (state = [], action) => {
   switch(action.type) {
     case 'SET_RECIPES':
-      return
+      return action.recipes.meals
     case 'TOGGLE_FAVORITE':
       return
     case 'FILTER_RECIPES':
