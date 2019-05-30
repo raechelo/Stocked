@@ -13,8 +13,8 @@ export class Form extends Component {
         <section>
           <select>
             {
-            // this.state.ingredients.map(i => {
-              // return(<option value={i}>{i}</option>)
+            this.props.ingredients.map(i => {
+              return(<option value={i.name}>{i.name}</option>)
             })
             }
           </select>
