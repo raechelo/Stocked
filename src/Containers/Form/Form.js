@@ -9,14 +9,14 @@ export class Form extends Component {
     this.props.fetchIngredients(url);
   }
   render() {
-    // const displayIngredients = this.state.ingredients.map(i => {
-    //   return(<option>{i}</option>)
-    // })
-
       return (
         <section>
           <select>
-            {/* {displayIngredients} */}
+            {
+            // this.state.ingredients.map(i => {
+              // return(<option value={i}>{i}</option>)
+            })
+            }
           </select>
         </section>
       )
