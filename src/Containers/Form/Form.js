@@ -13,17 +13,17 @@ export class Form extends Component {
       return(<option value={i.name}>{i.name}</option>)
     })
       return (
-        <section>
-          <select>
+        <form className="Form">
+          <select className="dropdown">
             {displayIngredients}
           </select>
-          <select>
+          <select className="dropdown">
             {displayIngredients}
           </select>
-          <select>
+          <select className="dropdown">
             {displayIngredients}
           </select>
-        </section>
+        </form>
       )
   }
 }

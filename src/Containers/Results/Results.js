@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchRecipes } from '../../thunks/fetchRecipes';
-import RecipeCard from '../RecipeCard/RecipeCard';
+import RecipeCard from '../../Components/RecipeCard/RecipeCard';
 
 export class Results extends Component {
   componentDidMount() {
