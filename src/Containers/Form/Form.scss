@@ -1,20 +1,27 @@
 .Form {
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  .dropdown {
+    
+  .Dropdown-control {
     background-color: $fave;
-    border: 3px solid $accent;
+    border: 1px solid transparent;
+    color: white;
+    min-width: 15rem;
+  }
+  .Dropdown-menu {
+    background-color: $fave;
+    border: 2px solid $accent;
+    color: white;
+  }
+
+  .Dropdown-option {
     color: white;
 
-    option {
+    &:hover {
+      background-color: $accent;
       color: white;
-
-
-      &:hover {
-        background-color: $accent;
-      }
     }
   }
 }
