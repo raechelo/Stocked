@@ -8,12 +8,15 @@
     background-color: $fave;
     border: 1px solid transparent;
     color: white;
+    font-family: $body-font;
     min-width: 15rem;
   }
   .Dropdown-menu {
     background-color: $fave;
     border: 2px solid $accent;
+    border-radius: 0 0 3px 3px;
     color: white;
+    font-family: $body-font;
   }
 
   .Dropdown-option {
