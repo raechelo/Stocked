@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchIngredients } from '../../thunks/fetchIngredients';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css'
 
 export class Form extends Component {
   
@@ -13,17 +15,17 @@ export class Form extends Component {
       return(<option value={i.name}>{i.name}</option>)
     })
       return (
-        <section>
-          <select>
-            {displayIngredients}
-          </select>
-          <select>
-            {displayIngredients}
-          </select>
-          <select>
-            {displayIngredients}
-          </select>
-        </section>
+        <form className="Form">
+          <Dropdown 
+          options={displayIngredients} 
+          placeholder='Please choose an ingredient' />
+          <Dropdown 
+          options={displayIngredients} 
+          placeholder='Please choose an ingredient'  />
+          <Dropdown 
+          options={displayIngredients}  
+          placeholder='Please choose an ingredient' />
+        </form>
       )
   }
 }
