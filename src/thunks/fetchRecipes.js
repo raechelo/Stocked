@@ -11,13 +11,12 @@ export const fetchRecipes = arr => {
       const recipes = arr.map(async a => {
         const { id } = a
         meals = await fetchData(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-        console.log(meals)
-        cleanRecipes(meals)
+        meals = cleanRecipes(meals)
         dispatch(setRecipes(meals))
       })
       dispatch(isLoading(false));
     } catch (error) {
-      // dispatch(setError(error.message))
+      dispatch(setError(error.message))
     }
   }
 }

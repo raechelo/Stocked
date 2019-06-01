@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default function RecipeCard(props) {
-  const { strMeal } = props
+  const { name, image, link, tags, yt } = props
   return (
-    <div>
-      <h5>{strMeal}</h5>
-    </div>
+    <article>
+      <h5>{name}</h5>
+      <img src={image} alt={`${name} picture`} />
+    </article>
   )
 }
