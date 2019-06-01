@@ -7,15 +7,12 @@ import Instructions from '../../Components/Instructions/Instructions';
 
 export class Results extends Component {
 
-  componentDidMount() {
-    // this.props.fetchRecipes(url)
-  }
   render() {
-    const displayCards = this.props.results.map(r => (<RecipeCard {...r}  />))
+    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r}  />))
 
     return (
       <section className="Results">
-        {this.props.results.length ? displayCards : <Instructions />}
+        {this.props.recipes.length ? displayCards : <Instructions />}
       </section>
     )
   }
@@ -26,11 +23,7 @@ Results.propTypes = {
 }
 
 export const mapStateToProps = state => ({
-  results: state.results
+  recipes: state.recipes
 })
 
-export const mapDispatchToProps = dispatch => ({
-  fetchResults: (url) => dispatch(fetchRecipes(url))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Results);
+export default connect(mapStateToProps)(Results);
