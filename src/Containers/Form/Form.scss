@@ -6,17 +6,16 @@
   justify-content: space-around;
 
   .Dropdown-root {
-    // border-top: 2px solid $accent;
-    // border-left: 2px solid $accent;
-    // border-right: 2px solid $accent;
     border-radius: 2px;
     box-shadow: 1px 1px 2px darken($fave, 30%);
+    min-height: 1.5rem;
   }
     
   .Dropdown-control {
     background-color: $fave;
     border: 2px solid $accent;
     color: white;
+    cursor: pointer;
     font-family: $body-font;
     min-width: 15rem;
   }
@@ -51,6 +50,7 @@
     border-radius: 2px;
     box-shadow: 1px 1px 2px darken($fave, 30%);
     color: white;
+    cursor: pointer;
     font-family: $body-font;
     font-size: 1rem;
 
