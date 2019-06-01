@@ -50,17 +50,20 @@ export class Form extends Component {
           onChange={this.handleChange}
           options={displayIngredients1}
           value={this.state.ingredientOne}
-          placeholder='Please choose an ingredient' />
+          placeholder='Please choose an ingredient'
+           />
           <Dropdown 
           onChange={this.handleChange}
           options={displayIngredients2} 
           value={this.state.ingredientTwo}
-          placeholder='Please choose an ingredient'  />
+          placeholder='Please choose an ingredient'
+          />
           <Dropdown 
           onChange={this.handleChange}
           options={displayIngredients3}  
           value={this.state.ingredientThree}
-          placeholder='Please choose an ingredient' />
+          placeholder='Please choose an ingredient'
+          />
           <button onClick={this.handleClick}>Find Me Recipes!</button>
         </form>
       )
