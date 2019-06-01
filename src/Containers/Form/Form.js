@@ -26,8 +26,7 @@ export class Form extends Component {
     this.setState({ [label.props.name]: i })
   }
 
-  handleClick = (e) => {
-    e.preventDefault();
+  handleClick = () => {
     const { ingredientOne, ingredientTwo, ingredientThree } = this.state;
     const url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo},${ingredientThree}`
     this.props.fetchResults(url);
@@ -45,7 +44,7 @@ export class Form extends Component {
     });
 
       return (
-        <form className="Form">
+        <section className="Form">
           <Dropdown 
           onChange={this.handleChange}
           options={displayIngredients1}
@@ -65,7 +64,7 @@ export class Form extends Component {
           placeholder='Please choose an ingredient'
           />
           <button onClick={this.handleClick}>Find Me Recipes!</button>
-        </form>
+        </section>
       )
   }
 }
