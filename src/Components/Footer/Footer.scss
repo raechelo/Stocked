@@ -1,9 +1,18 @@
 .Footer {
-  position: absolute;
   bottom: -1rem;
+  font-family: $fancy-font;
+  font-size: 1.5rem;
   left: 45%;
+  position: absolute;
 
   h5 {
+    margin: 0;
+    letter-spacing: .05rem;
+
+    span {
+      margin-left: .5rem;
+    }
+
     img {
       width: 2rem;
     }

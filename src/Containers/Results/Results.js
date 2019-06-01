@@ -6,12 +6,12 @@ import RecipeCard from '../../Components/RecipeCard/RecipeCard';
 import Instructions from '../../Components/Instructions/Instructions';
 
 export class Results extends Component {
+
   componentDidMount() {
-    const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata';
     // this.props.fetchRecipes(url)
   }
   render() {
-    const displayCards = this.props.results.map(r => (<RecipeCard {...r} key={r.idMeal}  />))
+    const displayCards = this.props.results.map(r => (<RecipeCard {...r}  />))
 
     return (
       <section className="Results">
@@ -30,7 +30,7 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  fetchRecipes: (url) => dispatch(fetchRecipes(url))
+  fetchResults: (url) => dispatch(fetchRecipes(url))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Results);

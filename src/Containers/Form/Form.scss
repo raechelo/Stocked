@@ -4,11 +4,18 @@
   flex-direction: row;
   grid-area: form;
   justify-content: space-around;
+
+  .Dropdown-root {
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px darken($fave, 30%);
+    min-height: 1.5rem;
+  }
     
   .Dropdown-control {
     background-color: $fave;
-    border: 1px solid transparent;
+    border: 2px solid $accent;
     color: white;
+    cursor: pointer;
     font-family: $body-font;
     min-width: 15rem;
   }
@@ -26,6 +33,31 @@
     &:hover {
       background-color: $accent;
       color: white;
+    }
+  }
+
+  .Dropdown-arrow {
+    border-color: white transparent transparent;
+  }
+
+  .is-open .Dropdown-arrow {
+    border-color: transparent transparent white;
+  }
+
+  button {
+    background-color: $fave;
+    border: 2px solid $accent;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px darken($fave, 30%);
+    color: white;
+    cursor: pointer;
+    font-family: $body-font;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: $accent;
+      border: 2px solid $fave;
+      text-decoration: underline;
     }
   }
 }
