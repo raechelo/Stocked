@@ -8,6 +8,7 @@ export const cleanRecipes = recipes => {
       link: m.strSource,
       tags: m.strTags,
       yt: m.strYoutube,
+      instructions: m.strInstructions,
       ingredient1: m.strIngredient1,
       ingredient2: m.strIngredient2,
       ingredient3: m.strIngredient3,

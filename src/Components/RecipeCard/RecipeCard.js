@@ -1,10 +1,11 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
+import Instructions from '../Instructions/Instructions';
 
 export default function RecipeCard(props) {
   const { name, category, image, link, tags, yt } = props
   return (
-    <article>
+    <article className="Recipe-Card">
       <h5>{name}</h5>
       <section>
         <p><span>{props.measure1}</span>{props.ingredient1}</p>
@@ -28,8 +29,9 @@ export default function RecipeCard(props) {
         <p><span>{props.measure19}</span>{props.ingredient19}</p>
         <p><span>{props.measure20}</span>{props.ingredient20}</p>
       </section>
-      <a href={link}>{link}</a>
-      <a href={yt}><img src={youtube}/></a>
+      <p className="instr">{Instructions}</p>
+      <a className="link" href={link}>{link}</a>
+      <a className="yt-link" href={yt}><img src={youtube}/></a>
       {tags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
       <h6>{category}</h6>
       <img src={image} alt={`${name} picture`} />

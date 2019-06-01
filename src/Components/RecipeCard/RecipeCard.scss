@@ -1,0 +1,36 @@
+.Recipe-Card {
+  display: grid;
+  grid-template-areas: "name name name img"
+  "ing ing ing img"
+  "inst inst inst img"
+  "link link link img"
+  "tags cat yt img";
+
+  h5 {
+    grid-area: name;
+  }
+
+  section {
+    grid-area: ing;
+  }
+
+  .instr {
+    grid-area: inst;
+  }
+
+  .link {
+    grid-area: link;
+  }
+
+  .yt-link {
+    grid-area: yt;
+  }
+
+  h6 {
+    grid-area: cat;
+  }
+
+  img {
+    grid-area: img;
+  }
+}
