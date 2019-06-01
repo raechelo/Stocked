@@ -3,18 +3,19 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchRecipes } from '../../thunks/fetchRecipes';
 import RecipeCard from '../../Components/RecipeCard/RecipeCard';
+import Instructions from '../../Components/Instructions/Instructions';
 
 export class Results extends Component {
   componentDidMount() {
     const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata';
-    this.props.fetchRecipes(url)
+    // this.props.fetchRecipes(url)
   }
   render() {
-    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r} key={r.idMeal}  />))
+    const displayCards = this.props.results.map(r => (<RecipeCard {...r} key={r.idMeal}  />))
 
     return (
       <div>
-        {displayCards}
+        {this.props.results.length ? displayCards : <Instructions />}
       </div>
     )
   }
@@ -25,7 +26,7 @@ Results.propTypes = {
 }
 
 export const mapStateToProps = state => ({
-  recipes: state.recipes
+  results: state.results
 })
 
 export const mapDispatchToProps = dispatch => ({
