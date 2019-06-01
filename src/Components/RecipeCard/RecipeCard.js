@@ -29,10 +29,10 @@ export default function RecipeCard(props) {
         <p><span>{props.measure19}</span>{props.ingredient19}</p>
         <p><span>{props.measure20}</span>{props.ingredient20}</p>
       </section>
-      <p className="instr">{Instructions}</p>
+      <p className="instr">{props.instructions}</p>
       <a className="link" href={link}>{link}</a>
       <a className="yt-link" href={yt}><img src={youtube}/></a>
-      {tags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
+      {tags && tags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
       <h6>{category}</h6>
       <img src={image} alt={`${name} picture`} />
     </article>
