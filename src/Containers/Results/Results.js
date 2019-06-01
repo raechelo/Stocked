@@ -14,9 +14,9 @@ export class Results extends Component {
     const displayCards = this.props.results.map(r => (<RecipeCard {...r} key={r.idMeal}  />))
 
     return (
-      <div>
+      <section className="Results">
         {this.props.results.length ? displayCards : <Instructions />}
-      </div>
+      </section>
     )
   }
 }
