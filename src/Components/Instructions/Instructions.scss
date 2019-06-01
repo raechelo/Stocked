@@ -1,0 +1,7 @@
+.Instructions {
+  color: lighten($card-border, 20%);
+  font-family: $fancy-font;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px darken($fave, 10%);
+}
