@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Form } from './Form';
+import { Form, mapStateToProps, mapDispatchToProps } from './Form';
 import { fetchResults } from '../../thunks/fetchResults';
 import { fetchIngredients } from '../../thunks/fetchIngredients';
-
-import { mapStateToProps, mapDispatchToProps } from './Form';
 
 describe('Form', () => {
 
@@ -58,7 +56,7 @@ describe('mapStateToProps', () => {
 
 describe('mapDispatchToProps', () => {
 
-  it.skip('should call dispatch and fetch ingredients', () => {
+  it('should call dispatch and fetch ingredients', () => {
     const mockDispatch = jest.fn();
     const actionToDispatch = fetchIngredients('www.placeholder.com');
     mapDispatchToProps(mockDispatch);
@@ -75,5 +73,5 @@ describe('mapDispatchToProps', () => {
     
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
-  
+
 });
