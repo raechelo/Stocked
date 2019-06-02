@@ -12,7 +12,31 @@ describe('actions', () => {
   it('should return an error message with a type of SET_ERROR', () => {
     const expected = { type: 'SET_ERROR', msg: 'Error!' };
     const result = actions.setError('Error!');
-    
+
     expect(result).toEqual(expected);
-  })
+  });
+
+  it('should return recipes with a type of SET_RECIPES', () => {
+    const recipes = [{title: 'Mac&Cheese'}]
+    const expected = { type: 'SET_RECIPES', recipes };
+    const result = actions.setRecipes(recipes);
+    expect(result).toEqual(expected);
+  });
+
+  it(' should return a toggled favorite id with a type of TOGGLE_FAVORITE', () => {
+    const recipe = {title: 'Mac&Cheese', id: 1, favorite: false}
+    const { id } = recipe;
+    const expected = { type: 'TOGGLE_FAVORITE', id };
+    const result = actions.toggleFavorite(1)
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return filtered recipes with a type of FILTER_RECIPES', () => {
+    const input = 'Vietnamese';
+    const expected = { type: 'FILTER_RECIPES', input };
+    const result = actions.filterRecipes(input);
+
+    expect(result).toEqual(expected);
+  });
 });
