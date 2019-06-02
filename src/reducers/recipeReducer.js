@@ -3,9 +3,13 @@ export const recipes = (state = [], action) => {
     case 'SET_RECIPES':
       return action.recipes
     case 'TOGGLE_FAVORITE':
-      return
+    return state.map(recipe => {
+      return recipe.id === action.id ? {...recipe, favorite: !recipe.favorite} : recipe;
+    })
     case 'FILTER_RECIPES':
-      return
+      return state.filter(recipe => {
+        return recipe.category === action.input
+      })
     default:
       return state
   }
