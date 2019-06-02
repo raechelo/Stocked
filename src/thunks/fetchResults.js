@@ -13,7 +13,7 @@ export const fetchResults = url => {
       dispatch(isLoading(false));
       dispatch(setResults(results));
     } catch (error) {
-      dispatch(setError(error))
+      dispatch(setError(error.message))
     }
   }
 }

@@ -10,7 +10,7 @@ describe('actions', () => {
   });
 
   it('should return an error message with a type of SET_ERROR', () => {
-    const expected = { type: 'SET_ERROR', msg: 'Error!' };
+    const expected = { type: 'SET_ERROR', message: 'Error!' };
     const result = actions.setError('Error!');
 
     expect(result).toEqual(expected);

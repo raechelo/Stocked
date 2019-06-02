@@ -3,9 +3,9 @@ export const isLoading = bool => ({
   isLoading: bool
 });
 
-export const setError = msg => ({
+export const setError = message => ({
   type: 'SET_ERROR',
-  msg
+  message
 });
 
 export const setRecipes = recipes => ({

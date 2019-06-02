@@ -16,4 +16,11 @@ describe('isLoading', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('should return a falsy value in case of no longer loading', () => {
+    const expected = false;
+    const result = isLoading(undefined, actions.isLoading(false));
+
+    expect(result).toEqual(expected);
+  })
 });

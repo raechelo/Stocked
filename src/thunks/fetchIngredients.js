@@ -9,7 +9,7 @@ export const fetchIngredients = url => {
       const ingredients = cleanIngredients(data);
       dispatch(setIngredients(ingredients));
     } catch (error) {
-      dispatch(setError(error))
+      dispatch(setError(error.message))
     }
   }
 }
