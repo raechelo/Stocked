@@ -15,5 +15,5 @@ describe('results', () => {
     const result = results([{name: 'Avocados'}], actions.setResults([{name: 'Avocados'}]));
 
     expect(result).toEqual(expected);
-  })
+  });
 });
