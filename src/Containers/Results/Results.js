@@ -7,7 +7,7 @@ import Instructions from '../../Components/Instructions/Instructions';
 export class Results extends Component {
 
   render() {
-    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r}  />))
+    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r} key={Date.now()} />))
 
     return (
       <section className="Results">
