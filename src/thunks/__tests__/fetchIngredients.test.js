@@ -1,7 +1,5 @@
 import { fetchIngredients } from '../fetchIngredients';
-import { fetchData } from '../../api/fetchData';
 import { setIngredients, setError } from '../../actions';
-import { cleanIngredients } from '../../api/cleanIngredients';
 
 describe('fetchIngredients', () => {
 
@@ -16,7 +14,7 @@ describe('fetchIngredients', () => {
   beforeEach(() => {
     mockUrl = 'someurl.com';
     mockDispatch = jest.fn();
-    mockIngredients = [{name: 'Avocados'}, {name: 'Mangoes'}];
+    mockIngredients = { meals: [{strIngredient: 'Avocados'}, {strIngredient: 'Mangoes'}] } ;
     mockCleanIngredients = jest.fn();
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
@@ -35,9 +33,14 @@ describe('fetchIngredients', () => {
   });
   
   it('should call clean ingredients if response is okay', async () => {
-    await thunk(mockDispatch);
-    expect(mockCleanIngredients).toHaveBeenCalledWith(mockIngredients);
+    let i = await thunk(mockDispatch);
+    expect(mockCleanIngredients).toHaveBeenCalledWith(i);
   });
+
+  it('should call dispatch and set ingredients if the response is okay', async () => {
+    await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(setIngredients(mockIngredients))
+  })
 
   it('should dispatch an error if the response is not okay', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
