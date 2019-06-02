@@ -4,6 +4,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
 import { fetchIngredients } from '../../thunks/fetchIngredients';
 import { fetchResults } from '../../thunks/fetchResults';
+import { PropTypes } from 'prop-types'
 
 export class Form extends Component {
   constructor() {
@@ -67,6 +68,12 @@ export class Form extends Component {
         </section>
       )
   }
+}
+
+Form.propTypes = {
+  ingredients: PropTypes.array,
+  fetchIngredients: PropTypes.func,
+  fetchResults: PropTypes.func
 }
 
 export const mapStateToProps = state => ({

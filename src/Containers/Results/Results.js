@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchRecipes } from '../../thunks/fetchRecipes';
 import RecipeCard from '../../Components/RecipeCard/RecipeCard';
 import Instructions from '../../Components/Instructions/Instructions';
 
@@ -19,7 +18,7 @@ export class Results extends Component {
 }
 
 Results.propTypes = {
-  fetchRecipes: PropTypes.func
+  recipes: PropTypes.array
 }
 
 export const mapStateToProps = state => ({
