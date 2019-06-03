@@ -4,6 +4,9 @@ import { fetchData } from '../../api/fetchData';
 import { cleanResults } from '../../api/cleanResults';
 import { fetchRecipes } from '../fetchRecipes';
 
+jest.mock('../../api/cleanResults');
+jest.mock('../fetchRecipes');
+
 describe('fetchResults', () => {
 
   let thunk;
@@ -12,8 +15,6 @@ describe('fetchResults', () => {
   let mockResults;
   
   beforeEach(() => {
-    jest.mock('../../api/cleanResults');
-    jest.mock('../fetchRecipes');
     mockUrl = 'someurl.com';
     mockDispatch = jest.fn();
     mockResults = {meals: [{strMeal: 'Nachos'}, {strMeal: 'tacos'}]}
