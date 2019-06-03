@@ -10,7 +10,7 @@ Coming soon...
 - Redux
 - Scss
 - Jest/Enzyme
-- [Meal DB](https://www.themealdb.com)
+- [Meal DB API](https://www.themealdb.com)
 - [npm tooltip](https://www.npmjs.com/package/react-tooltip)
 - [npm dropdown](https://www.npmjs.com/package/react-dropdown)
 
