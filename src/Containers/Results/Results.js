@@ -19,7 +19,7 @@ export class Results extends Component {
   }
 
   render() {
-    const displayCards = this.props.recipes.map(r => (<Card {...r} key={r.id} onClick={this.handleClick} />))
+    const displayCards = this.props.recipes.map(r => (<Card {...r} key={r.id} onClick={() => this.handleClick} />))
 
     const displayRecipe = this.props.recipes.find(r => r.id === this.state.isExpanded[1])
 

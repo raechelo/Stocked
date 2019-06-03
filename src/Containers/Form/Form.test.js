@@ -4,17 +4,20 @@ import { Form, mapStateToProps, mapDispatchToProps } from './Form';
 import { fetchResults } from '../../thunks/fetchResults';
 import { fetchIngredients } from '../../thunks/fetchIngredients';
 
-describe('Form', () => {
+jest.mock('../../thunks/fetchResults')
+jest.mock('../../thunks/fetchIngredients')
 
-  jest.mock('../../thunks/fetchResults')
-  jest.mock('../../thunks/fetchIngredients')
+describe('Form', () => {
 
   let wrapper;
   let ingredients = ['Mangoes', 'Jalapenos', 'Cilantro', 'Avocaods']
-  let mockFetchIngredients = jest.fn();
-  let mockFetchResults = jest.fn();
+  let mockFetchIngredients;
+  let mockFetchResults
 
   beforeEach(()=> {
+    mockFetchIngredients = jest.fn();
+    mockFetchResults = jest.fn();
+
     wrapper = shallow(<Form fetchIngredients={mockFetchIngredients} ingredients={ingredients} fetchResults={mockFetchResults} />)
 
   });
@@ -55,21 +58,26 @@ describe('mapStateToProps', () => {
 });
 
 describe('mapDispatchToProps', () => {
+  let mockDispatch = jest.fn();
 
-  it('should call dispatch and fetch ingredients', () => {
-    const mockDispatch = jest.fn();
-    const actionToDispatch = fetchIngredients('www.placeholder.com');
-    mapDispatchToProps(mockDispatch);
-    
+  it('should dispatch ingredients on call of fetch ingredients', () => {
+    const mockState = {
+      ingredients: ['Avocados', 'Mangoes']
+    }
+    const actionToDispatch = fetchIngredients(mockState);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.fetchIngredients(mockState);
     
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 
   it('should call dispatch and fetch results', () => {
-    const mockDispatch = jest.fn();
-    const actionToDispatch = fetchResults('www.placeholder.com');
+    const mockState = {
+      results: [{title: 'Mango Salsa'}]
+    }
+    const actionToDispatch = fetchResults(mockState);
     const mappedProps = mapDispatchToProps(mockDispatch);
-    mappedProps.handleClick('www.placeholder.com');
+    mappedProps.fetchResults(mockState);
     
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
