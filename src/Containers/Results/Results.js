@@ -2,16 +2,31 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import RecipeCard from '../../Components/RecipeCard/RecipeCard';
+import Card from '../../Components/Card/Card';
 import Instructions from '../../Components/Instructions/Instructions';
 
 export class Results extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isExpanded: [false, 0]
+    }
+  }
+
+  handleClick = (e) => {
+    const { id } = e.target
+    this.setState({isExpanded: [!this.state.isExpanded, id]})
+  }
 
   render() {
-    const displayCards = this.props.recipes.map(r => (<RecipeCard {...r} key={Date.now()} />))
+    const displayCards = this.props.recipes.map(r => (<Card {...r} key={r.id} onClick={this.handleClick} />))
+
+    const displayRecipe = this.props.recipes.find(r => r.id === this.state.isExpanded[1])
 
     return (
       <section className="Results">
         {this.props.recipes.length ? displayCards : <Instructions />}
+        {this.state.isExpanded && <RecipeCard {...displayRecipe} />}
       </section>
     )
   }

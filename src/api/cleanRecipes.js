@@ -1,6 +1,7 @@
 export const cleanRecipes = recipes => {
   return recipes.meals.map(m => {
     return ({
+      id: m.idMeal,
       name: m.strMeal,
       category: m.strCategory,
       area: m.strArea,

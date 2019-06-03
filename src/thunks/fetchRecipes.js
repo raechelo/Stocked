@@ -7,6 +7,7 @@ export const fetchRecipes = arr => {
   return async dispatch => {
     try {
       dispatch(isLoading(true));
+      let meals;
       const recipes = arr.map(async a => {
         const { id } = a
         meals = await fetchData(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
