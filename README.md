@@ -10,7 +10,7 @@ Coming soon...
 - Redux
 - Scss
 - Jest/Enzyme
-- [MealDB API] (https://www.themealdb.com/api.php)
+- [Meal DB] (https://www.themealdb.com)
 - [npm tooltip](https://www.npmjs.com/package/react-tooltip)
 - [npm dropdown](https://www.npmjs.com/package/react-dropdown)
 
@@ -23,4 +23,4 @@ Coming soon...
 This project was given to the developers to enforce their understanding of Redux and how it is integrated into an app in a smart, effective manner. In addition, the developer was to ensure their understanding of how to test all parts of Redux, including actions, thunks, reducers, and mapStateToProps/mapDispatchToProps.
 
 ## Contributors
-Raechel Odom(github.com/raechelo)
+[Raechel Odom](github.com/raechelo)
