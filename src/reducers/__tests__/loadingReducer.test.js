@@ -22,5 +22,5 @@ describe('isLoading', () => {
     const result = isLoading(undefined, actions.isLoading(false));
 
     expect(result).toEqual(expected);
-  })
+  });
 });
