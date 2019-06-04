@@ -10,19 +10,18 @@ export class Results extends Component {
     super();
     this.state = {
       isExpanded: false,
-      exId: 0
+      id: 0
     }
   }
 
-  handleClick = (e) => {
-    const { id } = e.target
-    this.setState({isExpanded: !this.state.isExpanded, exId: id})
+  handleClick = (id) => {
+    this.setState({isExpanded: !this.state.isExpanded, id})
   }
 
   render() {
-    const displayCards = this.props.recipes.map(r => (<Card {...r} key={r.id} onClick={() => this.handleClick} />))
+    const displayCards = this.props.recipes.map(r => (<Card {...r} key={r.id} onClick={this.handleClick} />))
 
-    const displayRecipe = this.props.recipes.find(r => r.id === this.state.exId)
+    const displayRecipe = this.props.recipes.find(r => r.id == this.state.exId)
 
     return (
       <section className="Results">

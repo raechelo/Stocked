@@ -1,11 +1,10 @@
 import React from 'react'
-import youtube from '../../assets/youtube.svg';
 
 
 export default function Card(props) {
-  const { name, category, image, link, tags, yt } = props
+  const { name, image, tags } = props
   return (
-    <article className="Card">
+    <article className="Card" onClick={() => props.onClick(props.id)}>
       <h3>{name}</h3>
       <section>
         <p><span>{props.measure1}</span>{props.ingredient1}</p>
