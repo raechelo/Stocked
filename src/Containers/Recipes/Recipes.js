@@ -3,8 +3,8 @@ import Card from '../../Components/Card/Card';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types'
 
-export const Recipes = () => {
-  const displayCards = this.state.recipes.map(r => (<Card {...r} key={r.id} />))
+export const Recipes = (state) => {
+  const displayCards = state.recipes.map(r => (<Card {...r} key={r.id} />))
   return (
     <section>
       {displayCards}
