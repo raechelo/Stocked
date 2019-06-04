@@ -1,12 +1,19 @@
 .Recipe-Card {
+  background-color: $card-bg;
+  border: 2px solid $card-border;
+  border-radius: 5px;
   display: grid;
-  grid-template-areas: "name name name img"
-  "ing ing ing img"
-  "inst inst inst img"
-  "link link link img"
-  "tags cat yt img";
+  font-family: $body-font;
+  grid-template-areas: "name name img"
+  "ing ing img"
+  "inst inst img"
+  "link yt img"
+  "tags cat img";
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
 
   h5 {
+    font-family: $fancy-font;
     grid-area: name;
   }
 
@@ -19,18 +26,38 @@
   }
 
   .link {
+    text-decoration: underline;
     grid-area: link;
+    &:hover {
+      color: $fave;
+      cursor: pointer;
+    }
   }
 
   .yt-link {
     grid-area: yt;
+    cursor: pointer;
   }
 
   h6 {
     grid-area: cat;
   }
 
-  img {
+  .tags {
+    color: $fave;
+    font-weight: bolder;
+  }
+
+  .meal-pic {
     grid-area: img;
+    width: 50%;
+  }
+
+  section p {
+
+    span {
+      font-weight: bolder;
+      margin: 0 .5rem;
+    }
   }
 }

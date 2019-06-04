@@ -1,6 +1,5 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
-import Instructions from '../Instructions/Instructions';
 
 export default function RecipeCard(props) {
   const { name, category, image, link, tags, yt } = props
@@ -34,7 +33,7 @@ export default function RecipeCard(props) {
       <a className="yt-link" href={yt} target="blank" ><img src={youtube}/></a>
       {tags && tags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
       <h6>{category}</h6>
-      <img src={image} alt={`${name} picture`} />
+      <img className="meal-pic" src={image} alt={`${name} picture`} />
     </article>
   )
 }
