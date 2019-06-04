@@ -1,0 +1,51 @@
+.Card {
+  background-color: $card-bg;
+  box-shadow: 1px 1px 3px $card-shadow;
+  border: 4px solid $card-border;
+  border-radius: 5px;
+  display: grid;
+  font-family: $body-font;
+  grid-template-areas: "name img"
+  "ing img"
+  "tags img";
+  grid-template-columns: 1.5fr 1fr;
+  height: 25%;
+  padding: 1rem;
+  width: 40%;
+
+  h3 {
+    font-family: $fancy-font;
+    font-size: 2rem;
+    margin: 0;
+    grid-area: name;
+  }
+
+  section {
+    grid-area: ing;
+
+    p {
+      margin: 0;
+
+      span {
+        font-weight: bolder;
+        margin: .2rem;
+      }
+    }
+  }
+
+  .tags {
+    color: $fave;
+    font-weight: bolder;
+  }
+
+  .meal-pic {
+    grid-area: img;
+    margin: auto;
+    width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 3px $card-shadow;
+    cursor: pointer;
+  }
+}

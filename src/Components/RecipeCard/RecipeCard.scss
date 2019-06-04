@@ -1,15 +1,15 @@
 .Recipe-Card {
-  background-color: papayawhip;
+  background-color: $card-bg;
   border: 2px solid $card-border;
+  border-radius: 5px;
   display: grid;
   font-family: $body-font;
-  grid-template-areas: "name name name img"
-  "ing ing ing img"
-  "inst inst inst img"
-  "link link link img"
-  "tags cat yt img";
-  min-height: 25%;
-  min-width: 25%;
+  grid-template-areas: "name name img"
+  "ing ing img"
+  "inst inst img"
+  "link yt img"
+  "tags cat img";
+  grid-template-columns: repeat(3, 1fr);
 
   h5 {
     font-family: $fancy-font;
@@ -42,11 +42,17 @@
     grid-area: cat;
   }
 
-  img {
-    grid-area: img;
+  .tags {
+    color: $fave;
+    font-weight: bolder;
   }
 
-  p {
+  .meal-pic {
+    grid-area: img;
+    width: 50%;
+  }
+
+  section p {
 
     span {
       font-weight: bolder;

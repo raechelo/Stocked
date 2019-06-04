@@ -27,7 +27,7 @@ export class Results extends Component {
     return (
       <section className="Results">
         {this.props.recipes.length ? displayCards : <Instructions />}
-        {this.state.isExpanded && <RecipeCard onClick={this.handleClick} {...displayRecipe} />}
+        {this.state.isExpanded && <RecipeCard {...displayRecipe} />}
       </section>
     )
   }
