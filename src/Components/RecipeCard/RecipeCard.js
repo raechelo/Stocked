@@ -1,6 +1,5 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
-import Instructions from '../Instructions/Instructions';
 
 export default function RecipeCard(props) {
   const { name, category, image, link, tags, yt } = props

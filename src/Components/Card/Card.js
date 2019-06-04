@@ -5,7 +5,7 @@ import youtube from '../../assets/youtube.svg';
 export default function Card(props) {
   const { name, category, image, link, tags, yt } = props
   return (
-    <article>
+    <article className="Recipe-Card">
       <h3>{name}</h3>
       <section>
         <p><span>{props.measure1}</span>{props.ingredient1}</p>

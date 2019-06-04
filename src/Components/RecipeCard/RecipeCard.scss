@@ -1,12 +1,18 @@
 .Recipe-Card {
+  background-color: papayawhip;
+  border: 2px solid $card-border;
   display: grid;
+  font-family: $body-font;
   grid-template-areas: "name name name img"
   "ing ing ing img"
   "inst inst inst img"
   "link link link img"
   "tags cat yt img";
+  min-height: 25%;
+  min-width: 25%;
 
   h5 {
+    font-family: $fancy-font;
     grid-area: name;
   }
 
@@ -19,11 +25,17 @@
   }
 
   .link {
+    text-decoration: underline;
     grid-area: link;
+    &:hover {
+      color: $fave;
+      cursor: pointer;
+    }
   }
 
   .yt-link {
     grid-area: yt;
+    cursor: pointer;
   }
 
   h6 {
@@ -32,5 +44,13 @@
 
   img {
     grid-area: img;
+  }
+
+  p {
+
+    span {
+      font-weight: bolder;
+      margin: 0 .5rem;
+    }
   }
 }

@@ -14,6 +14,7 @@ export const fetchRecipes = arr => {
         meals = cleanRecipes(meals)
         dispatch(setRecipes(meals))
       })
+      console.log(recipes)
       dispatch(isLoading(false));
     } catch (error) {
       dispatch(setError(error.message))

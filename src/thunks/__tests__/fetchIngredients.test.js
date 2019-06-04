@@ -1,5 +1,6 @@
 import { fetchIngredients } from '../fetchIngredients';
 import { setIngredients, setError } from '../../actions';
+import { mapDispatchToProps } from '../../Containers/Form/Form';
 
 describe('fetchIngredients', () => {
 
@@ -39,7 +40,13 @@ describe('fetchIngredients', () => {
 
   it('should call dispatch and set ingredients if the response is okay', async () => {
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(setIngredients(mockIngredients))
+    const mockState = {
+      ingredients: [{strIngredient: 'Avocados'}, {strIngredient: 'Mangoes'}]
+    }
+    const actionToDispatch = setIngredients(mockState);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.setIngredients(mockState);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should dispatch an error if the response is not okay', async () => {
