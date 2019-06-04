@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
 import { fetchIngredients } from '../../thunks/fetchIngredients';
+import { Link } from 'react-router-dom';
 import { fetchResults } from '../../thunks/fetchResults';
 import { PropTypes } from 'prop-types'
 
@@ -64,7 +65,7 @@ export class Form extends Component {
           value={this.state.ingredientThree}
           placeholder='Please choose an ingredient'
           />
-          <button onClick={this.handleClick}>Find Me Recipes!</button>
+          <Link to='/recipes'><button onClick={this.handleClick}>Find Me Recipes!</button></Link>
         </section>
       )
   }
