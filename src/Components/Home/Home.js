@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Form from '../../Containers/Form/Form';
 import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
 import Instructions from '../../Components/Instructions/Instructions';
 
 class Home extends Component {
@@ -15,8 +13,6 @@ class Home extends Component {
   render() {
     return (
       <section>
-          <Header />
-          <Form />
           <Instructions />
           <Footer />
       </section>

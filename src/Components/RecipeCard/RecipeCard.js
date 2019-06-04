@@ -1,10 +1,21 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
+import { Route } from 'react-router-dom';
 
 export default function RecipeCard(props) {
   const { name, category, image, link, tags, yt } = props
   return (
     <article className="Recipe-Card">
+       <Route path='/recipes/:id' render={ ( { match } ) => {
+            const { id } = match.params
+            console.log(id)
+            const recipe = props.recipes.find(r => r.id == id)
+            console.log(recipe)
+            if (recipe) {
+              return <RecipeCard {...recipe}/>
+            }
+          }
+        } />
       <h5>{name}</h5>
       <section>
         <p><span>{props.measure1}</span>{props.ingredient1}</p>
@@ -37,3 +48,4 @@ export default function RecipeCard(props) {
     </article>
   )
 }
+
