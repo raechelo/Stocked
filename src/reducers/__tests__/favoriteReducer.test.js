@@ -9,7 +9,7 @@ describe('favorites', () => {
     expect(result).toEqual(expected);
   });
 
-  it('should set recipes', () => {
+  it('should set favorites', () => {
     const expected = [{name: 'M&C'}, {name: 'Guac'}];
     const result = favorites([], actions.setFavorites([{name: 'M&C'}, {name: 'Guac'}]));
     expect(result).toEqual(expected)

@@ -9,7 +9,7 @@ export const fetchResults = url => {
       dispatch(isLoading(true))
       const data = await fetchData(url);
       let results = cleanResults(data);
-      dispatch(setResults(results));
+      // dispatch(setResults(results));
       dispatch(fetchRecipes(results))
       dispatch(isLoading(false));
     } catch (error) {
