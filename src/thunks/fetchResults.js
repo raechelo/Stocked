@@ -9,9 +9,9 @@ export const fetchResults = url => {
       dispatch(isLoading(true))
       const data = await fetchData(url);
       let results = cleanResults(data);
-      dispatch(fetchRecipes(results))
-      dispatch(isLoading(false));
       dispatch(setResults(results));
+      await dispatch(fetchRecipes(results))
+      dispatch(isLoading(false));
     } catch (error) {
       dispatch(setError(error.message))
     }

@@ -1,40 +1,42 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
+import ReactDelayRender from 'react-delay-render';
 
-export default function RecipeCard(props) {
-  const { name, category, image, link, tags, yt } = props
+const RecipeCard = (props) => {
   return (
     <article className="Recipe-Card">
-      <h5>{name}</h5>
+      <h5>{props.strMeal}</h5>
       <section>
-        <p><span>{props.measure1}</span>{props.ingredient1}</p>
-        <p><span>{props.measure2}</span>{props.ingredient2}</p>
-        <p><span>{props.measure3}</span>{props.ingredient3}</p>
-        <p><span>{props.measure4}</span>{props.ingredient4}</p>
-        <p><span>{props.measure5}</span>{props.ingredient5}</p>
-        <p><span>{props.measure6}</span>{props.ingredient6}</p>
-        <p><span>{props.measure7}</span>{props.ingredient7}</p>
-        <p><span>{props.measure8}</span>{props.ingredient8}</p>
-        <p><span>{props.measure9}</span>{props.ingredient9}</p>
-        <p><span>{props.measure10}</span>{props.ingredient10}</p>
-        <p><span>{props.measure11}</span>{props.ingredient11}</p>
-        <p><span>{props.measure12}</span>{props.ingredient12}</p>
-        <p><span>{props.measure13}</span>{props.ingredient13}</p>
-        <p><span>{props.measure14}</span>{props.ingredient14}</p>
-        <p><span>{props.measure15}</span>{props.ingredient15}</p>
-        <p><span>{props.measure16}</span>{props.ingredient16}</p>
-        <p><span>{props.measure17}</span>{props.ingredient17}</p>
-        <p><span>{props.measure18}</span>{props.ingredient18}</p>
-        <p><span>{props.measure19}</span>{props.ingredient19}</p>
-        <p><span>{props.measure20}</span>{props.ingredient20}</p>
+        <p><span>{props.strMeasure1}</span>{props.strIngredient1}</p>
+        <p><span>{props.strMeasure2}</span>{props.strIngredient2}</p>
+        <p><span>{props.strMeasure3}</span>{props.strIngredient3}</p>
+        <p><span>{props.strMeasure4}</span>{props.strIngredient4}</p>
+        <p><span>{props.strMeasure5}</span>{props.strIngredient5}</p>
+        <p><span>{props.strMeasure6}</span>{props.strIngredient6}</p>
+        <p><span>{props.strMeasure7}</span>{props.strIngredient7}</p>
+        <p><span>{props.strMeasure8}</span>{props.strIngredient8}</p>
+        <p><span>{props.strMeasure9}</span>{props.strIngredient9}</p>
+        <p><span>{props.strMeasure10}</span>{props.strIngredient10}</p>
+        <p><span>{props.strMeasure11}</span>{props.strIngredient11}</p>
+        <p><span>{props.strMeasure12}</span>{props.strIngredient12}</p>
+        <p><span>{props.strMeasure13}</span>{props.strIngredient13}</p>
+        <p><span>{props.strMeasure14}</span>{props.strIngredient14}</p>
+        <p><span>{props.strMeasure15}</span>{props.strIngredient15}</p>
+        <p><span>{props.strMeasure16}</span>{props.strIngredient16}</p>
+        <p><span>{props.strMeasure17}</span>{props.strIngredient17}</p>
+        <p><span>{props.strMeasure18}</span>{props.strIngredient18}</p>
+        <p><span>{props.strMeasure19}</span>{props.strIngredient19}</p>
+        <p><span>{props.strMeasure20}</span>{props.strIngredient20}</p>
       </section>
-      <p className="instr">{props.instructions}</p>
-      <a className="link" href={link} target="blank" >{link}</a>
-      <a className="yt-link" href={yt} target="blank" ><img src={youtube}/></a>
-      {tags && tags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
-      <h6>{category}</h6>
-      <img className="meal-pic" src={image} alt={`${name} picture`} />
+      <p className="instr">{props.strInstructions}</p>
+      <a className="link" href={props.strSourceLink} target="blank" >View Recipe</a>
+      <a className="yt-link" href={props.strYoutube} target="blank" ><img src={youtube}/></a>
+      {props.strTags && props.strTags.split(',').join(' ').split(' ').map(i => (`#${i}`))}
+      <h6>{props.strCategory}</h6>
+      <img className="meal-pic" src={props.strMealThumb} alt={` picture`} />
     </article>
   )
 }
+
+export default ReactDelayRender({delay: 1200})(RecipeCard);
 
