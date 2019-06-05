@@ -38,5 +38,4 @@ const RecipeCard = (props) => {
   )
 }
 
-export default ReactDelayRender({delay: 1200})(RecipeCard);
-
+export default RecipeCard;
