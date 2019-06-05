@@ -1,5 +1,4 @@
 import { fetchData } from '../api/fetchData';
-
 import { isLoading, setError, setRecipes } from '../actions'; 
 
 export const fetchRecipes = arr => {

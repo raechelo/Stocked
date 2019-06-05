@@ -6,15 +6,18 @@
   font-family: $body-font;
   grid-template-areas: "name name img"
   "ing ing img"
-  "inst inst img"
-  "link yt img"
-  "tags cat img";
+  "inst inst inst"
+  "link yt .";
   grid-template-columns: repeat(3, 1fr);
-  width: 80%;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 40%;
 
   h5 {
     font-family: $fancy-font;
+    font-size: 1.5rem;
     grid-area: name;
+    margin: 0;
   }
 
   section {
@@ -23,11 +26,14 @@
 
   .instr {
     grid-area: inst;
+    max-height: 4rem;
+    overflow: scroll;
   }
 
   .link {
     text-decoration: underline;
     grid-area: link;
+    margin: auto;
     &:hover {
       color: $fave;
       cursor: pointer;
@@ -35,25 +41,26 @@
   }
 
   .yt-link {
-    grid-area: yt;
     cursor: pointer;
-  }
-
-  h6 {
-    grid-area: cat;
+    grid-area: yt;
+    width: 2.5rem;
+    margin: auto;
   }
 
   .tags {
     color: $fave;
     font-weight: bolder;
+    margin: auto;
   }
 
   .meal-pic {
     grid-area: img;
-    width: 50%;
+    width: 100%;
   }
 
   section p {
+
+    margin: 0;
 
     span {
       font-weight: bolder;

@@ -4,7 +4,6 @@ import Home from '../../Components/Home/Home';
 import Header from '../../Components/Header/Header';
 import Form from '../../Containers/Form/Form';
 import Recipes from '../../Containers/Recipes/Recipes';
-import DelayRecipes from '../DelayRecipes/DelayRecipes';
 import NoMatch from '../NoMatch/NoMatch';
 
 function App() {

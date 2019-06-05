@@ -1,17 +1,13 @@
 import { fetchRecipes } from '../fetchRecipes';
-import { cleanRecipes } from '../../api/cleanRecipes';
 import { setRecipes, isLoading, setError } from '../../actions';
-import { fetchData } from '../../api/fetchData';
 import { mapDispatchToProps } from '../../Containers/Form/Form';
 
 describe('fetchRecipes', () => {
 
-  let mockRecipes;
   let mockUrl;
   let mockDispatch;
   let thunk;
   let mockFetchData
-  let mockCleanRecipes;
 
   jest.mock('../../api/cleanRecipes')
   let mockMeals;
@@ -48,14 +44,6 @@ describe('fetchRecipes', () => {
     })
     await mockFetchData(mockUrl)
     expect(mockFetchData).toHaveBeenCalled();
-  });
-
-  it('should call cleanRecipes', async () => {
-    let fetchData = jest.fn().mockImplementation(() => Promise.resolve({
-      results: mockMeals
-    }));
-    await fetchData(mockUrl);
-    expect(mockCleanRecipes).toHaveBeenCalled();
   });
 
   it('should call setRecipes', async () => {
