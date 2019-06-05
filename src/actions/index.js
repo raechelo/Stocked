@@ -13,13 +13,13 @@ export const setRecipes = recipes => ({
   recipes
 });
 
-export const addFavorite = favorite => ({
+export const addFavorite = fave => ({
   type: 'ADD_FAVORITE',
-  favorite
+  fave
 });
 
 export const setFavorites = favorites => ({
-  type: 'SET_FAVORTES',
+  type: 'SET_FAVORITES',
   favorites
 });
 

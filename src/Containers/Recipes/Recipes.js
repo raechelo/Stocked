@@ -8,7 +8,6 @@ import Loading from '../../Components/Loading/Loading';
 export class Recipes extends Component {
 
   favoriteRecipe = (fave) => {
-    console.log(fave)
     this.props.addFavorite(fave)
   }
   
