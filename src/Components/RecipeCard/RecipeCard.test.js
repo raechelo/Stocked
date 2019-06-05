@@ -44,5 +44,5 @@ describe('RecipeCard', () => {
     }
 
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 });

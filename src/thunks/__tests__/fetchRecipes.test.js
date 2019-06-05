@@ -9,12 +9,10 @@ describe('fetchRecipes', () => {
   let thunk;
   let mockFetchData
 
-  jest.mock('../../api/cleanRecipes')
   let mockMeals;
   let mockArray = [{title: 'Mango Salsa', id: 1}, {title: 'Bacon Pancakes', id: 2}, {title: 'Jalapeno Grilled Cheese', id: 3}]
 
   beforeEach(() => {
-    mockCleanRecipes = jest.fn();
     mockUrl = 'someurl.com';
     mockDispatch = jest.fn();
     mockMeals = [ {strMeal: 'Mac & Cheese'} ];

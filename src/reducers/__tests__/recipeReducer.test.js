@@ -17,14 +17,6 @@ describe('recipes', () => {
     expect(result).toEqual(expected);
   })
 
-  it('should toggle favorite attribute on a recipe', () => {
-    const id = 1;
-    const expected = [ { id, favorite: false } ];
-    const result = recipes([ { id, favorite: true } ], actions.toggleFavorite(id));
-
-    expect(result).toEqual(expected);
-  });
-
   it('should filter recipes', () => {
     const input = 'Vietnamese';
     const expected = [{category: 'Vietnamese'}];
