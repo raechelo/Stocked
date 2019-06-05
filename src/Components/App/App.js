@@ -14,19 +14,19 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/recipes' component={Recipes} />
+        {/* <Route path='/recipes/:id' render={ ( { match } ) => {
+              const { id } = match.params
+              const recipe = this.props.recipes.find(r => parseInt(r.name) === id)
+              console.log(recipe)
+              if (recipe) {
+                console.log(recipe)
+                return <RecipeCard {...recipe}/>
+              }
+            }
+          } /> */}
         {/* <Route path='/recipes/:id' component={RecipeCard} /> */}
     {/* <Route exact path='/favorites' component={Favorites} /> */}
       </Switch>
-    {/* <Route path='/results/:id' render={ ( { match } ) => {
-          const { id } = match.params
-          const recipe = this.props.recipes.find(r => parseIntr.name === id)
-          console.log(recipe)
-          if (recipe) {
-            console.log(recipe)
-            return <RecipeCard {...recipe}/>
-          }
-        }
-      } /> */}
     </div>
   );
 }
