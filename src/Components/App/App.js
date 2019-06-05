@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../../Components/Home/Home';
-import RecipeCard from '../RecipeCard/RecipeCard';
 import Header from '../../Components/Header/Header';
 import Form from '../../Containers/Form/Form';
 import Recipes from '../../Containers/Recipes/Recipes';
+import NoMatch from '../NoMatch/NoMatch';
 
 function App() {
   return (
@@ -14,18 +14,8 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/recipes' component={Recipes} />
-        {/* <Route path='/recipes/:id' render={ ( { match } ) => {
-              const { id } = match.params
-              const recipe = this.props.recipes.find(r => parseInt(r.name) === id)
-              console.log(recipe)
-              if (recipe) {
-                console.log(recipe)
-                return <RecipeCard {...recipe}/>
-              }
-            }
-          } /> */}
-        {/* <Route path='/recipes/:id' component={RecipeCard} /> */}
-    {/* <Route exact path='/favorites' component={Favorites} /> */}
+        {/* <Route exact path='/favorites' component={Favorites} /> */}
+        <Route component={NoMatch} />
       </Switch>
     </div>
   );
