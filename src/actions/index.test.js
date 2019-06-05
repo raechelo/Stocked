@@ -16,13 +16,6 @@ describe('actions', () => {
     expect(result).toEqual(expected);
   });
 
-  it('should return recipes with a type of SET_RECIPES', () => {
-    const recipes = [{title: 'Mac&Cheese'}]
-    const expected = { type: 'SET_RECIPES', recipes };
-    const result = actions.setRecipes(recipes);
-    expect(result).toEqual(expected);
-  });
-
   it('should add a new recipe to the favorites store', () => {
     const favorite = [{title: 'Pho'}];
     const expected = { type: 'ADD_FAVORITE', favorite};
@@ -58,14 +51,6 @@ describe('actions', () => {
     const ing = ['Avocados', 'Mangoes', 'Cilantro'];
     const expected = { type: 'SET_INGREDIENTS', ing };
     const result = actions.setIngredients(ing);
-
-    expect(result).toEqual(expected);
-  });
-
-  it('should return results with a type of SET_RESULTS', () => {
-    const results = [{name: 'Chilaquiles'}];
-    const expected = { type: 'SET_RESULTS', results };
-    const result = actions.setResults(results);
 
     expect(result).toEqual(expected);
   });

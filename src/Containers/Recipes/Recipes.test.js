@@ -30,6 +30,18 @@ describe('mapStateToProps', () => {
     const mappedProps = mapStateToProps(mockState);
     expect(mappedProps).toEqual(expected);
   });
+
+  it('should return an object with the isLoading value', () => {
+    const mockState = {
+      isLoading: true
+    }
+    const expected = {
+      isLoading: true
+    }
+
+    const mappedProps = mapStateToProps(mockState);
+    expect(mappedProps).toEqual(expected);
+  });
 });
 
 describe('mapDispatchToProps', () => {

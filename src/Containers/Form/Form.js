@@ -29,14 +29,16 @@ export class Form extends Component {
 
   handleChange = (e) => {
     this.splitStrings(e);
-    this.chooseIngredients();
+    setTimeout(() => this.chooseIngredients(), 0)
   }
 
-  chooseIngredients = async () => {
+  chooseIngredients = () => {
     const { ingredientOne, ingredientTwo } = this.state;
+    console.log(this.state)
     let url;
     this.state.ingredientTwo ? url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo}` : 
     url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne}`
+    console.log(url)
     this.props.fetchResults(url);
   }
 

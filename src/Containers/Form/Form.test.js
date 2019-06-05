@@ -35,7 +35,7 @@ describe('Form', () => {
 
   it('should handle clicks', () => {
     wrapper.setState({ ingredientOne: 'bacon', ingredientTwo: 'mac', ingredientThree: 'cheese'});
-    wrapper.instance().chooseIngredient()
+    wrapper.instance().chooseIngredients()
     expect(mockFetchResults).toHaveBeenCalled();
   });  
 

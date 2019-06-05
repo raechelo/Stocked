@@ -1,5 +1,5 @@
 import { fetchData } from '../api/fetchData';
-import { setError, setResults, isLoading } from '../actions';
+import { setError, isLoading } from '../actions';
 import { cleanResults } from '../api/cleanResults';
 import { fetchRecipes } from './fetchRecipes';
 
@@ -9,7 +9,6 @@ export const fetchResults = url => {
       dispatch(isLoading(true))
       const data = await fetchData(url);
       let results = cleanResults(data);
-      dispatch(setResults(results));
       dispatch(fetchRecipes(results))
       dispatch(isLoading(false));
     } catch (error) {
