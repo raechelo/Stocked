@@ -45,34 +45,26 @@ describe('fetchRecipes', () => {
   });
 
   it('should call setRecipes', async () => {
-    mockArray.map(m => {
-      mockFetchData = jest.fn().mockImplementation(() => {
-        return Promise.resolve({
-          results: m
-        })
-      })
-    })
-    await mockFetchData(mockUrl);
-    
+    await thunk(mockDispatch)
+
     const mockState = {
       recipes: [{title: 'Mango Salsa', id: 1}, {title: 'Bacon Pancakes', id: 2}, {title: 'Jalapeno Grilled Cheese', id: 3}]
     };
-    const actionToDipsatch = setRecipes(mockState);
+
+    const actionToDispatch = setRecipes(mockState);
     const mappedProps = mapDispatchToProps(mockDispatch);
     mappedProps.setRecipes(mockState);
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDipsatch)
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
   it('should dispatch an error if the response is not okay', async () => {
-    mockArray.map(m => {
-      mockFetchData = jest.fn().mockImplementation(() => {
+      window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
           ok: false,
           statusText: 'Something went wrong'
         })
       })
-    })
-    await mockFetchData(mockUrl);
+    await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(setError('Something went wrong'))
   });
 });
