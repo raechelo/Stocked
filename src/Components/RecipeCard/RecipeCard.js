@@ -37,3 +37,4 @@ export default function RecipeCard(props) {
     </article>
   )
 }
+

@@ -1,16 +1,22 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Results from '../../Containers/Results/Results';
+import { Route, Switch } from 'react-router-dom';
+import Home from '../../Components/Home/Home';
+import Header from '../../Components/Header/Header';
 import Form from '../../Containers/Form/Form';
-import Footer from '../Footer/Footer';
+import Recipes from '../../Containers/Recipes/Recipes';
+import NoMatch from '../NoMatch/NoMatch';
 
 function App() {
   return (
     <div className="App">
-    <Header />
-    <Form />
-    <Results />
-    <Footer />
+      <Header />
+      <Form />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/recipes' component={Recipes} />
+        {/* <Route exact path='/favorites' component={Favorites} /> */}
+        <Route component={NoMatch} />
+      </Switch>
     </div>
   );
 }

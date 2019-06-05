@@ -2,9 +2,9 @@ import React from 'react'
 
 
 export default function Card(props) {
-  const { name, image, tags } = props
+  const { name, image, tags, id } = props
   return (
-    <article className="Card" onClick={() => props.onClick(props.id)}>
+    <article className="Card" >
       <h3>{name}</h3>
       <section>
         <p><span>{props.measure1}</span>{props.ingredient1}</p>
