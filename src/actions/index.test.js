@@ -23,11 +23,25 @@ describe('actions', () => {
     expect(result).toEqual(expected);
   });
 
-  it(' should return a toggled favorite id with a type of TOGGLE_FAVORITE', () => {
+  it('should add a new recipe to the favorites store', () => {
+    const recipe = [{title: 'Pho'}];
+    const expected = { type: 'add_RECIPES', recipe};
+    const result = actions.addFavorite(result);
+    expect(result).toEqual(expected);
+  });
+
+  it('should set recipes with a type of SET_RECIPES', () => {
+    const recipes = [{title: 'Pho'}];
+    const expected = { type: 'SET_RECIPES', recipes};
+    const result = actions.setRecipes(recipes);
+    expect(result).toEqual(expected);
+  });
+
+  it(' should return a toggled favorite id with a type of DELETE_FAVORITE', () => {
     const recipe = {title: 'Mac&Cheese', id: 1, favorite: false}
     const { id } = recipe;
-    const expected = { type: 'TOGGLE_FAVORITE', id };
-    const result = actions.toggleFavorite(1)
+    const expected = { type: 'DELETE_FAVORITE', id };
+    const result = actions.deleteFavorite(1)
 
     expect(result).toEqual(expected);
   });

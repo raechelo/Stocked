@@ -22,7 +22,6 @@ export class Recipes extends Component {
   }
 }
 
-
 Recipes.propTypes = {
   recipes: PropTypes.array
 }
