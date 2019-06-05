@@ -10,7 +10,7 @@ export const fetchResults = url => {
       const data = await fetchData(url);
       let results = cleanResults(data);
       dispatch(setResults(results));
-      await dispatch(fetchRecipes(results))
+      dispatch(fetchRecipes(results))
       dispatch(isLoading(false));
     } catch (error) {
       dispatch(setError(error.message))

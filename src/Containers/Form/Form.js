@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
 import { fetchIngredients } from '../../thunks/fetchIngredients';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchResults } from '../../thunks/fetchResults';
 import { PropTypes } from 'prop-types'
 
@@ -37,7 +37,7 @@ export class Form extends Component {
     let url;
     this.state.ingredientTwo ? url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo}` : 
     url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne}`
-    await this.props.fetchResults(url);
+    this.props.fetchResults(url);
   }
 
     render() {

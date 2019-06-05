@@ -13,8 +13,18 @@ export const setRecipes = recipes => ({
   recipes
 });
 
-export const toggleFavorite = id => ({
-  type: 'TOGGLE_FAVORITE',
+export const addFavorite = favorite => ({
+  type: 'ADD_FAVORITE',
+  favorite
+});
+
+export const setFavorites = favorites => ({
+  type: 'SET_FAVORTES',
+  favorites
+});
+
+export const deleteFavorite = id => ({
+  type: 'DELETE_FAVORITE',
   id
 });
 

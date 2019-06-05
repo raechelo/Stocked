@@ -2,19 +2,24 @@
   background-color: $card-bg;
   border: 2px solid $card-border;
   border-radius: 5px;
+  box-shadow: 1px 1px 3px $card-shadow;
   display: grid;
   font-family: $body-font;
   grid-template-areas: "name name img"
   "ing ing img"
-  "inst inst img"
-  "link yt img"
-  "tags cat img";
+  "inst inst inst"
+  "link yt .";
   grid-template-columns: repeat(3, 1fr);
-  width: 80%;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 40%;
 
   h5 {
     font-family: $fancy-font;
+    font-size: 1.5rem;
     grid-area: name;
+    margin: 0;
+    text-decoration: underline;
   }
 
   section {
@@ -23,11 +28,16 @@
 
   .instr {
     grid-area: inst;
+    max-height: 4rem;
+    overflow: scroll;
   }
 
   .link {
-    text-decoration: underline;
+    color: black;
+    font-size: 1.5rem;
     grid-area: link;
+    margin: auto;
+    text-decoration: underline;
     &:hover {
       color: $fave;
       cursor: pointer;
@@ -35,29 +45,49 @@
   }
 
   .yt-link {
-    grid-area: yt;
     cursor: pointer;
-  }
-
-  h6 {
-    grid-area: cat;
+    grid-area: yt;
+    width: 2.5rem;
+    margin: auto;
   }
 
   .tags {
     color: $fave;
     font-weight: bolder;
+    margin: auto;
   }
 
   .meal-pic {
     grid-area: img;
-    width: 50%;
+    width: 100%;
   }
 
   section p {
+
+    margin: 0;
 
     span {
       font-weight: bolder;
       margin: 0 .5rem;
     }
+  }
+
+  .fave {
+    position: relative;
+    bottom: -70%;
+    right: -290%;
+    height: 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      animation: heartbeat 1.5s ease-in-out both;
+    }
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 3px $card-shadow;
   }
 }
