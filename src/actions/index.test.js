@@ -24,9 +24,9 @@ describe('actions', () => {
   });
 
   it('should add a new recipe to the favorites store', () => {
-    const recipe = [{title: 'Pho'}];
-    const expected = { type: 'add_RECIPES', recipe};
-    const result = actions.addFavorite(result);
+    const favorite = [{title: 'Pho'}];
+    const expected = { type: 'ADD_FAVORITE', favorite};
+    const result = actions.addFavorite([{title: 'Pho'}]);
     expect(result).toEqual(expected);
   });
 
