@@ -12,8 +12,7 @@ export class Form extends Component {
     super();
     this.state = {
       ingredientOne: '',
-      ingredientTwo: '',
-      ingredientThree: ''
+      ingredientTwo: ''
     }
   }
   
@@ -29,8 +28,10 @@ export class Form extends Component {
   }
 
   handleClick = () => {
-    const { ingredientOne, ingredientTwo, ingredientThree } = this.state;
-    const url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo},${ingredientThree}`
+    const { ingredientOne, ingredientTwo } = this.state;
+    let url;
+    this.state.ingredientTwo ? url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo}` : 
+    url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne}`
     this.props.fetchResults(url);
   }
 
@@ -40,9 +41,6 @@ export class Form extends Component {
     });
     const displayIngredients2 = this.props.ingredients.map(i => {
       return(<option key={`${i.id}a`} name='ingredientTwo' value={i.name}>{i.name}</option>)
-    });
-    const displayIngredients3 = this.props.ingredients.map(i => {
-      return(<option key={`${i.id}b`} name='ingredientThree' value={i.name}>{i.name}</option>)
     });
 
       return (
@@ -57,12 +55,6 @@ export class Form extends Component {
           onChange={this.handleChange}
           options={displayIngredients2} 
           value={this.state.ingredientTwo}
-          placeholder='Please choose an ingredient'
-          />
-          <Dropdown 
-          onChange={this.handleChange}
-          options={displayIngredients3}  
-          value={this.state.ingredientThree}
           placeholder='Please choose an ingredient'
           />
           <Link to='/recipes'><button onClick={this.handleClick}>Find Me Recipes!</button></Link>
