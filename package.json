@@ -8,6 +8,7 @@
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-delay-render": "^0.1.2",
     "react-dom": "^16.8.6",
     "react-dropdown": "^1.6.4",
     "react-redux": "^7.0.3",

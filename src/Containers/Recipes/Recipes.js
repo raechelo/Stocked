@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 import RecipeCard from '../../Components/RecipeCard/RecipeCard';
 import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types'
+import { PropTypes } from 'prop-types';
 
-export const Recipes = ({recipes}) => {
-  const displayCards = recipes.map(r => (<RecipeCard {...r} key={r.id} />))
-  return (
-    <section>
-      {displayCards}
-    </section>
-  )
+
+export class Recipes extends Component {
+  render () {
+    let { recipes } = this.props
+    let displayCards = recipes.map(r => (<RecipeCard {...r} key={r.idMeal} />))
+    return (
+      <section>
+        { displayCards }
+      </section>
+    )
+  }
 }
+
 
 Recipes.propTypes = {
   recipes: PropTypes.array
 }
 
 export const mapStateToProps = state => ({
-  recipes: state.recipes
+    recipes: state.recipes
 })
 
-export default connect(mapStateToProps)(Recipes)
+export default connect(mapStateToProps)(Recipes);
+  

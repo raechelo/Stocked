@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
 import { fetchIngredients } from '../../thunks/fetchIngredients';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { fetchResults } from '../../thunks/fetchResults';
 import { PropTypes } from 'prop-types'
 
@@ -21,21 +21,26 @@ export class Form extends Component {
     this.props.fetchIngredients(url);
   }
 
-  handleChange = (e) => {
+  splitStrings = (e) => {
     const { label, value } = e
     const i = value.props.value.split(' ').join('_')
     this.setState({ [label.props.name]: i })
   }
 
-  handleClick = () => {
+  handleChange = (e) => {
+    this.splitStrings(e);
+    this.chooseIngredients();
+  }
+
+  chooseIngredients = async () => {
     const { ingredientOne, ingredientTwo } = this.state;
     let url;
     this.state.ingredientTwo ? url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo}` : 
     url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne}`
-    this.props.fetchResults(url);
+    await this.props.fetchResults(url);
   }
 
-  render() {
+    render() {
     const displayIngredients1 = this.props.ingredients.map(i => {
       return(<option key={i.id} name='ingredientOne' value={i.name}>{i.name}</option>)
     });
@@ -57,7 +62,7 @@ export class Form extends Component {
           value={this.state.ingredientTwo}
           placeholder='Please choose an ingredient'
           />
-          <Link to='/recipes'><button onClick={this.handleClick}>Find Me Recipes!</button></Link>
+          <button onClick={this.handleClick}><Link to='/recipes' >Find Recipes!</Link></button>
         </section>
       )
   }
