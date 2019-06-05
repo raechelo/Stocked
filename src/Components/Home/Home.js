@@ -8,7 +8,6 @@ class Home extends Component {
     return (
       <section>
         <Instructions />
-        <Footer />
       </section>
     )
   }

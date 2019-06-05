@@ -1,4 +1,4 @@
-import { Home } from './Home';
+import Home from './Home';
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -14,7 +14,7 @@ describe('Home', () => {
   it('should match the snapshot with all the data passed in', () => {
     expect(wrapper).toMatchSnapshot();
 
-    wrapper.setState({recipes: []})
+    wrapper.setState({recipes})
     expect(wrapper).toMatchSnapshot();
   });
 

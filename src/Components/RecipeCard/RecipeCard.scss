@@ -2,6 +2,7 @@
   background-color: $card-bg;
   border: 2px solid $card-border;
   border-radius: 5px;
+  box-shadow: 1px 1px 3px $card-shadow;
   display: grid;
   font-family: $body-font;
   grid-template-areas: "name name img"
@@ -9,7 +10,7 @@
   "inst inst inst"
   "link yt .";
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1rem;
   width: 40%;
 
@@ -18,6 +19,7 @@
     font-size: 1.5rem;
     grid-area: name;
     margin: 0;
+    text-decoration: underline;
   }
 
   section {
@@ -31,9 +33,11 @@
   }
 
   .link {
-    text-decoration: underline;
+    color: black;
+    font-size: 1.5rem;
     grid-area: link;
     margin: auto;
+    text-decoration: underline;
     &:hover {
       color: $fave;
       cursor: pointer;
@@ -66,5 +70,24 @@
       font-weight: bolder;
       margin: 0 .5rem;
     }
+  }
+
+  .fave {
+    position: relative;
+    bottom: -70%;
+    right: -290%;
+    height: 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      animation: heartbeat 1.5s ease-in-out both;
+    }
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 3px $card-shadow;
   }
 }

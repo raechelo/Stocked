@@ -7,13 +7,13 @@ import { addFavorite } from '../../actions/index'
 
 export class Recipes extends Component {
 
-  favoriteRecipe = () => {
-
+  favoriteRecipe = (fave) => {
+    this.props.addFavorite(fave)
   }
   
   render () {
-    let { recipes, addFavorite } = this.props
-    let displayCards = recipes.map(r => (<RecipeCard {...r} key={r.idMeal} />))
+    let { recipes } = this.props
+    let displayCards = recipes.map(r => (<RecipeCard {...r} key={r.idMeal} addFavorite={this.favoriteRecipe} />))
     return (
       <section className="Recipes">
         { displayCards }
@@ -32,7 +32,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  addFavorite: fave => dispatch(addFavorite(fave))
+  addFavorite: favorite => dispatch(addFavorite(favorite))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Recipes);
