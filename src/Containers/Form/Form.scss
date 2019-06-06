@@ -8,7 +8,7 @@
   .Dropdown-root {
     border-radius: 2px;
     box-shadow: 1px 1px 2px darken($fave, 30%);
-    min-height: 1.5rem;
+    height: 3rem;
   }
     
   .Dropdown-control {
@@ -17,14 +17,18 @@
     color: white;
     cursor: pointer;
     font-family: $body-font;
+    font-size: 1.3rem;
+    height: 3rem;
     min-width: 15rem;
   }
   .Dropdown-menu {
     background-color: $fave;
     border: 2px solid $accent;
     border-radius: 0 0 3px 3px;
+    box-shadow: 1px 1px 2px darken($fave, 30%);
     color: white;
     font-family: $body-font;
+    font-size: 1.1rem;
   }
 
   .Dropdown-option {
@@ -38,10 +42,12 @@
 
   .Dropdown-arrow {
     border-color: white transparent transparent;
+    border-width: 7px 7px 0;
   }
 
   .is-open .Dropdown-arrow {
     border-color: transparent transparent white;
+    border-width: 0 7px 7px;
   }
 
   button {
@@ -58,6 +64,13 @@
       background-color: $accent;
       border: 2px solid $fave;
       text-decoration: underline;
+    }
+  }
+
+  .go-btn {
+    font-size: 1.2rem;
+    &:visited {
+      color: white;
     }
   }
 }

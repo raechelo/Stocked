@@ -5,6 +5,7 @@ import Header from '../../Components/Header/Header';
 import Form from '../../Containers/Form/Form';
 import Recipes from '../../Containers/Recipes/Recipes';
 import NoMatch from '../NoMatch/NoMatch';
+import Favorites from '../../Containers/Favorites/Favorites';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/recipes' component={Recipes} />
-        {/* <Route exact path='/favorites' component={Favorites} /> */}
+        <Route exact path='/favorites' component={Favorites} />
         <Route component={NoMatch} />
       </Switch>
     </div>

@@ -34,7 +34,6 @@ export class Form extends Component {
 
   chooseIngredients = () => {
     const { ingredientOne, ingredientTwo } = this.state;
-    console.log(this.state)
     let url;
     this.state.ingredientTwo ? url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne},${ingredientTwo}` : 
     url = `https://www.themealdb.com/api/json/v2/8673533/filter.php?i=${ingredientOne}`
@@ -64,7 +63,7 @@ export class Form extends Component {
           value={this.state.ingredientTwo}
           placeholder='Please choose an ingredient'
           />
-          <button onClick={this.handleClick}><Link to='/recipes' >Find Recipes!</Link></button>
+          <button onClick={this.handleClick}><Link className="go-btn" to='/recipes' >Find Recipes!</Link></button>
         </section>
       )
   }
