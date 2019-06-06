@@ -8,7 +8,7 @@
   .Dropdown-root {
     border-radius: 2px;
     box-shadow: 1px 1px 2px darken($fave, 30%);
-    height: 3rem;
+    height: 2.5rem;
   }
     
   .Dropdown-control {
@@ -17,8 +17,8 @@
     color: white;
     cursor: pointer;
     font-family: $body-font;
-    font-size: 1.3rem;
-    height: 3rem;
+    font-size: 1.1rem;
+    height: 2.5rem;
     min-width: 15rem;
   }
   .Dropdown-menu {
@@ -28,7 +28,7 @@
     box-shadow: 1px 1px 2px darken($fave, 30%);
     color: white;
     font-family: $body-font;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .Dropdown-option {
@@ -68,7 +68,7 @@
   }
 
   .go-btn {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     &:visited {
       color: white;
     }
