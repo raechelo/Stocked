@@ -4,24 +4,31 @@
   grid-template-columns: repeat(3, 1fr);
   font-family: $fancy-font;
   font-size: 1.5rem;
-  margin: 1rem;
   
-  h1 {
-    grid-area: title;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .fave-link {
+  .title, h1 {
     color: black;
-    grid-area: fave;
-    margin: 0 auto;
+    grid-area: title;
+    margin: 0;
     text-align: center;
     text-decoration: none;
 
     &:hover {
       color: $fave;
+      cursor: pointer;
       text-decoration: underline;
+      }
     }
+  }
+
+  .fave-link {
+    color: black;
+    grid-area: fave;
+    margin-right: 2rem;
+    text-align: right;
+    text-decoration: none;
+
+    &:hover {
+      color: $fave;
+      text-decoration: underline;
   }
 }

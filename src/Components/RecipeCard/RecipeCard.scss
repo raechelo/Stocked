@@ -12,6 +12,7 @@
   "link yt tags";
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
+  max-height: fit-content;
   padding: 1rem;
   width: 40%;
 
@@ -58,8 +59,6 @@
     font-weight: bolder;
     grid-area: tags;
     margin: auto;
-    // max-width: 14rem;
-    // word-wrap: break-word;
   }
 
   .meal-pic {
