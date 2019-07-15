@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/stocked/static/css/main.ecccfa04.chunk.css",
+    "main.js": "/stocked/static/js/main.3293f605.chunk.js",
+    "main.js.map": "/stocked/static/js/main.3293f605.chunk.js.map",
+    "runtime~main.js": "/stocked/static/js/runtime~main.110d60f1.js",
+    "runtime~main.js.map": "/stocked/static/js/runtime~main.110d60f1.js.map",
+    "static/css/2.d58fcd6a.chunk.css": "/stocked/static/css/2.d58fcd6a.chunk.css",
+    "static/js/2.9c3e0a88.chunk.js": "/stocked/static/js/2.9c3e0a88.chunk.js",
+    "static/js/2.9c3e0a88.chunk.js.map": "/stocked/static/js/2.9c3e0a88.chunk.js.map",
+    "index.html": "/stocked/index.html",
+    "precache-manifest.ae3565f07b23b8d5e863bb37e21d40ee.js": "/stocked/precache-manifest.ae3565f07b23b8d5e863bb37e21d40ee.js",
+    "service-worker.js": "/stocked/service-worker.js",
+    "static/css/2.d58fcd6a.chunk.css.map": "/stocked/static/css/2.d58fcd6a.chunk.css.map",
+    "static/css/main.ecccfa04.chunk.css.map": "/stocked/static/css/main.ecccfa04.chunk.css.map",
+    "static/media/cleaver.svg": "/stocked/static/media/cleaver.20db6490.svg",
+    "static/media/cuttingboard.png": "/stocked/static/media/cuttingboard.9dcb1387.png",
+    "static/media/index.scss": "/stocked/static/media/food.abe742a9.jpeg",
+    "static/media/veggie.gif": "/stocked/static/media/veggie.c05092b7.gif",
+    "static/media/youtube.svg": "/stocked/static/media/youtube.a6372485.svg"
+  }
+}
