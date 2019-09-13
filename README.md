@@ -2,6 +2,8 @@
 
 Stocked is an app that gives users the opportunity to search recipes for ingredients that are already in their kitchen. Simply choose your ingredients and click go to see your results! If you see a recipe you really like, double click on the card to favorite it.
 
+The app is available [here](https://raechelo.github.io/Stocked/).
+
 ## Install/Setup
 Coming soon...
 
