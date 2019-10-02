@@ -1,11 +1,8 @@
 # Stocked
 
-Stocked is an app that gives users the opportunity to search recipes for ingredients that are already in their kitchen. Simply choose your ingredients and click go to see your results! If you see a recipe you really like, double click on the card to favorite it.
+Stocked is an app that gives users the opportunity to search recipes for ingredients that are already in their kitchen. Simply choose your ingredients and click go to see your results! If you see a recipe you really like, double click on the card to favorite it. In addition to favoriting a recipe, you can view the recipe on the page where it was originally published as well and viewing a Youtube video for that recipe.
 
 The app is available [here](https://master.d2me17v7trg2a3.amplifyapp.com/).
-
-## Install/Setup
-Coming soon...
 
 ## Stack/Tech Used
 - React
