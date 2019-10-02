@@ -18,14 +18,14 @@ export const addFavorite = fave => ({
   fave
 });
 
-export const setFavorites = favorites => ({
-  type: 'SET_FAVORITES',
-  favorites
-});
-
 export const deleteFavorite = id => ({
   type: 'DELETE_FAVORITE',
   id
+});
+
+export const setFavorites = favorites => ({
+  type: 'SET_FAVORITES',
+  favorites
 });
 
 export const filterRecipes = input => ({

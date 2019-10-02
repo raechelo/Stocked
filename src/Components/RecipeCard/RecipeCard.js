@@ -1,6 +1,5 @@
 import React from 'react'
 import youtube from '../../assets/youtube.svg';
-import heart from '../../assets/heart.svg';
 
 const RecipeCard = (props) => {
   return (
@@ -53,7 +52,6 @@ const RecipeCard = (props) => {
       <a className="yt-link" href={props.strYoutube} target="blank" ><img src={youtube}/></a>
       <p className='tags'>{props.strTags && props.strTags.split(',').join(' ').split(' ').map(i => (`#${i}`))}</p>
       <img className="meal-pic" src={props.strMealThumb} alt={` picture`} />
-      {/* <img className="fave" src={heart} alt='fave-meal' onDoubleClick={() => props.addFavorite({...props})} /> */}
     </article>
   )
 }

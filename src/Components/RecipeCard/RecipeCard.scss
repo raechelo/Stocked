@@ -5,18 +5,20 @@
   box-shadow: 1px 1px 3px $card-shadow;
   display: grid;
   font-family: $body-font;
+  grid-area: recipes;
   grid-template-areas: "name name img"
   "ing ing img"
   "inst inst inst"
-  "link yt .";
+  "link yt tags";
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
+  max-height: fit-content;
   padding: 1rem;
   width: 40%;
 
   h5 {
     font-family: $fancy-font;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     grid-area: name;
     margin: 0;
     text-decoration: underline;
@@ -24,6 +26,7 @@
 
   section {
     grid-area: ing;
+    font-size: .8rem;
   }
 
   .instr {
@@ -54,16 +57,16 @@
   .tags {
     color: $fave;
     font-weight: bolder;
+    grid-area: tags;
     margin: auto;
   }
 
   .meal-pic {
     grid-area: img;
-    width: 100%;
+    max-width: 10rem;
   }
 
   section p {
-
     margin: 0;
 
     span {

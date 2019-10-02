@@ -2,5 +2,28 @@ body {
   background-image: url('../assets/food.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
+  display: grid;
+  grid-template-areas: "header"
+  "form"
+  "recipes"
+  "footer";
+
+  header {
+    grid-area: header;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  .Recipes {
+    grid-area: recipes;
+    height: 95vh;
+    margin: 0;
+    overflow: scroll;
+  }
+
+  .Form {
+    grid-area: form;
+  }
 }
