@@ -6,12 +6,19 @@ The app is available [here](https://master.d2me17v7trg2a3.amplifyapp.com/).
 
 ## Stack/Tech Used 🥞
 🌮 React
+
 🍔 Redux
+
 🍜 Scss
+
 🍣 Jest/Enzyme
+
 🍩 [Meal DB API](https://www.themealdb.com)
+
 🥗 [npm tooltip](https://www.npmjs.com/package/react-tooltip)
+
 🥓 [npm dropdown](https://www.npmjs.com/package/react-dropdown)
+
 
 ## Screenshots 🍽
 
