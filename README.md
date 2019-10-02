@@ -18,7 +18,9 @@ Coming soon...
 
 ## Screenshots
 
-Coming soon...
+[![screencapture-master-d2me17v7trg2a3-amplifyapp-2019-10-02-15-51.png](https://i.postimg.cc/WpKrJysT/screencapture-master-d2me17v7trg2a3-amplifyapp-2019-10-02-15-51.png)](https://postimg.cc/rz1zBQdP)
+
+[![screencapture-master-d2me17v7trg2a3-amplifyapp-recipes-2019-10-0.png](https://i.postimg.cc/N0YRjrBX/screencapture-master-d2me17v7trg2a3-amplifyapp-recipes-2019-10-0.png)](https://postimg.cc/87K7ycFk)
 
 ## Learning Goals
 
